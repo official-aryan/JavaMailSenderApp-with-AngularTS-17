@@ -1,0 +1,24 @@
+<div class="form-container">
+    <form  (ngSubmit)="dosubmitForm()" class="custom-form" >
+
+      <mat-form-field class="form-field" >
+        <mat-label>TO</mat-label>
+        <input name="to" [(ngModel)]="data.to" matInput>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label>SUBJECT</mat-label>
+        <input name="subject" [(ngModel)]="data.subject" matInput>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label>MESSAGE</mat-label>
+        <textarea name="text" [(ngModel)]="data.text" matInput></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button mat-raised-button color="warn" type="reset">Reset</button>
+
+      <div>{{data | json}}</div>
+
+    </form>
+  </div>
+  
